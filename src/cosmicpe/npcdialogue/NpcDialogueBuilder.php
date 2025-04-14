@@ -90,7 +90,7 @@ final class NpcDialogueBuilder{
 	 * @param (Closure(Player) : void)|null $on_click
 	 * @return self
 	 */
-	public function addSimpleButton(string $name, Closure $on_click = null) : self{
+	public function addSimpleButton(string $name, ?Closure $on_click = null) : self{
 		$this->buttons[] = SimpleNpcDialogueButton::simple($name, $on_click ?? function(Player $player) : void{});
 		return $this;
 	}
